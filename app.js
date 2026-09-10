@@ -37,7 +37,7 @@ async function doSearch(){
     const data = await res.json();
     if(!res.ok) throw new Error(data.error || 'Search failed');
     renderResults(data.results || []);
-    $('status').textContent = `${data.results.length} result${data.results.length===1?'':'s'} found`;
+    $('status').textContent = `${data.results.length} result${data.results.length===1?'':'s'} found${data.subject ? ` · ${data.subject} relevance` : ''}`;
   }catch(err){
     $('results').innerHTML = `<div class="card"><div class="card-main"><div><h3>Search could not be completed</h3><p class="meta">${escapeHtml(err.message)}</p><p class="meta">You can still use the official source buttons below.</p></div></div></div>`;
     $('status').textContent = 'Search error';

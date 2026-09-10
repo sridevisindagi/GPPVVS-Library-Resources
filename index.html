@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Free academic e-resources search and QR portal - G.P. Porwal College Central Library, Sindagi">
+  <title>G.P. Porwal College Central Library — Free E-Resources</title>
+  <link rel="icon" href="/assets/college_logo.jpg">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="/assets/college_logo.jpg" alt="G.P. Porwal College logo">
+      <div>
+        <h1>G.P. Porwal College Central Library</h1>
+        <p>Sindagi · Free E-Resources &amp; QR Portal</p>
+      </div>
+    </div>
+    <button id="homeBtn" class="ghost-btn" type="button">Home</button>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div>
+        <span class="eyebrow">ACADEMIC RESOURCE DISCOVERY</span>
+        <h2>Search free &amp; open academic resources</h2>
+        <p>Find openly accessible books, full-view books, public-domain works, research resources and course materials. Scan a QR code to open the resource page on any phone.</p>
+      </div>
+      <div class="search-box">
+        <input id="query" type="search" placeholder="Try: library science, Indian history, Python programming" aria-label="Search academic resources">
+        <button id="searchBtn" type="button">🔍 Search</button>
+      </div>
+      <div class="chips">
+        <button class="chip" data-query="Library Science">Library Science</button>
+        <button class="chip" data-query="Indian History">Indian History</button>
+        <button class="chip" data-query="Computer Science">Computer Science</button>
+        <button class="chip" data-query="Economics">Economics</button>
+        <button class="chip" data-query="Zoology">Zoology</button>
+      </div>
+    </section>
+
+    <section id="landing" class="landing hidden"></section>
+
+    <section id="resultsSection" class="results-section hidden">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">SEARCH RESULTS</span>
+          <h2 id="resultsTitle">Results</h2>
+        </div>
+        <div id="status" class="status"></div>
+      </div>
+      <div id="results" class="results-grid"></div>
+    </section>
+
+    <section id="sources" class="sources-section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">MORE OPEN ACADEMIC SOURCES</span>
+          <h2>Search official resource platforms</h2>
+        </div>
+      </div>
+      <div class="source-grid" id="sourceGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>G.P. Porwal College Central Library, Sindagi</strong>
+    <span>Resources remain hosted by their original providers. Please follow each provider's access and copyright terms.</span>
+  </footer>
+
+  <div id="qrModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="qrTitle">
+    <div class="modal-card">
+      <button id="closeModal" class="close" aria-label="Close">×</button>
+      <h2 id="qrTitle">QR Code</h2>
+      <p id="qrSubtitle"></p>
+      <div id="qrBox" class="qr-box"></div>
+      <button id="downloadQr" class="primary-btn">⬇️ Download QR Code</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

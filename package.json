@@ -1,0 +1,7 @@
+{
+  "name": "gp-porwal-library-free-eresources",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Free academic e-resource discovery and QR portal for G.P. Porwal College Central Library, Sindagi",
+  "engines": { "node": ">=22" }
+}

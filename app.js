@@ -33,7 +33,7 @@ async function doSearch(){
   $('results').innerHTML = `<div class="card"><div class="card-main"><div><h3>Searching…</h3><p class="meta">Checking supported academic sources.</p></div></div></div>`;
   sourceGrid(q);
   try{
-    const res = await fetch(`/.netlify/functions/search?q=${encodeURIComponent(q)}&limit=12`);
+    const res = await fetch(`/api/search?q=${encodeURIComponent(q)}&limit=12`);
     const data = await res.json();
     if(!res.ok) throw new Error(data.error || 'Search failed');
     renderResults(data.results || []);
